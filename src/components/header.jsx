@@ -3,7 +3,8 @@ const Header = () => {
         <header>
         <div className="icon-container">
           <img
-            className="/thumb.png"
+            className="ticket-icon"
+            src="/thumb.png"
             alt="ticket-icon"
           />
           <img className="ticz-icon" src="/ticz.png" alt="ticz" />
