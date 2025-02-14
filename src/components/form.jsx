@@ -75,7 +75,7 @@ const Form = () => {
                     <div className="avatar-el">
 
                     <div>
-                    <img src="src/assets/cloud-download.png" alt="upload" />
+                    <img src="/cloud-download.png" alt="upload" />
                     </div>
 
                     <label htmlFor="avatar-input">Drag & drop or click to <span style={{display: "block"}}>upload</span></label>

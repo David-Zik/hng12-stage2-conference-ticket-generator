@@ -3,11 +3,10 @@ const Header = () => {
         <header>
         <div className="icon-container">
           <img
-            className="ticket-icon"
-            src="src/assets/thumb.png"
+            className="/thumb.png"
             alt="ticket-icon"
           />
-          <img className="ticz-icon" src="src/assets/ticz.png" alt="ticz" />
+          <img className="ticz-icon" src="/ticz.png" alt="ticz" />
         </div>
         <div className="button">
           <button>
