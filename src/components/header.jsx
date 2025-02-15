@@ -9,6 +9,11 @@ const Header = () => {
           />
           <img className="ticz-icon" src="/ticz.png" alt="ticz" />
         </div>
+        <div className="desktop-nav">
+          <p><a href="#" className="active">Events</a></p>
+          <p><a href="#">My Tickets</a></p>
+          <p><a href="#">About Project</a></p>
+        </div>
         <div className="button">
           <button>
             <a href="#">
