@@ -426,6 +426,7 @@ text-align: center;
   font-family: "Roboto", serif;
   white-space: nowrap;
   overflow: hidden;
+  border-radius: 8px;
   text-overflow: ellipsis;
   border: 1px solid #24A0B5;
 }
