@@ -38,12 +38,7 @@ const Form = () => {
 
     // Function to display image
     const  handleImageChange = async(e) => {
-        const file = e.target.files[0]; // Get the first selected files
-
-        // if (file) {
-        //     console.log(file)
-        //     setSelectedImage(URL.createObjectURL(file)); //Create preview URL
-        // }
+        const file = e.target.files[0]; // Get the first file
         setLoading(true);
 
         const data = new FormData()
@@ -67,8 +62,8 @@ const Form = () => {
         <>
 
 <div className="ticket_step-container">
-                <h2 className="main-title">Ticket Selection</h2>
-                <h3>Step 1/3</h3>
+                <h2 className="main-title">Attendee Details</h2>
+                <h3>Step 2/3</h3>
                 </div>
             <ProgressBar step={2} totalSteps={3}/>
             <form className="container" onSubmit={handleSubmit} >
@@ -102,7 +97,7 @@ const Form = () => {
 
                 <div className="input-container">
                 <label  htmlFor="name">Enter your name</label>
-                <input type="text" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} id="name" name="name" minlength="3" required/>
+                <input type="text" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} id="name" name="name" minlength="3" maxlength="25" required/>
                 {errors.name && <p style={{color: "red"}}>{errors.name}</p>}
                 </div>
 

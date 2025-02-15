@@ -353,14 +353,128 @@ form input {
 
 /* ************************************************* */
 /* THIRD PAGE */
+.heading_para-container {
+  text-align: center;
+  font-family: "Roboto", serif;
+}
+
+.heading_para-container h2{
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.75em;
+}
+
+.heading_para-container p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.ticket-frame-container {
+  padding: 2em 0;
+}
+
+.ticket-wrapper {
+  position: relative;
+}
 
 .ticket-frame {
   width: 100%;
 }
 
+.ticket-details {
+  width: 240px;
+  height:416px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: .875em;
+  border-radius: 1em;
+  border: 1px solid #24A0B5;
+}
+
+.event-title-date {
+width: 100%;
+text-align: center;
+}
+.event-title-date h5 {
+  font-size: 1.2em;
+  font-family: "JejuMyeongjo";
+}
+.event-title-date p {
+  font-size: .625em;
+  line-height: 1.5;
+  font-family: "Roboto", serif;
+}
+
+.user-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 0.75em;
+  border: 4px solid #24A0B5;
+}
+
+.event-title-date, .user-img {
+  margin-bottom: 1.25em;
+}
+
+.context {
+  width: 100%;
+  height: 160px;
+  font-family: "Roboto", serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px solid #24A0B5;
+}
+
+.context1 {
+  white-space: wrap;
+  line-height: .9em;
+}
+
+.context1, .context2 {
+  width: 100%;
+  height: 46px;
+  font-size: .625em;
+  display: flex;
+}
+
+.context-style {
+  border: 1px solid #12464E;
+  width: 50%;
+  padding: 4px;
+}
+
+.context-style p:first-child {
+  margin-bottom: .75em;
+  color:#B3B3B3;
+}
+
+.context3 p:first-child {
+  font-size: .625em;
+  margin-bottom: .75em;
+  padding: 4px;
+  color:#B3B3B3;
+}
+
+.context-style p:last-child {
+  font-weight: bold;
+  /* text-overflow: ellipsis; */
+}
+
+.barcode {
+  position: absolute;
+  left: 5.3em;
+  bottom: .5em;
+}
+
+
 /* ************************************************* */
 /* DESKTOP VIEW */
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
   header {
     width: 80%;
     /* margin: 10px auto 0; */
@@ -446,7 +560,8 @@ form input {
   }
 
   .next-desktop, .get-ticket-btn, .cancel-btn {
-    width: 270px
+    width: 270px;
+    cursor: pointer;
   }
 
 
@@ -471,6 +586,25 @@ form input {
     height: 240px;
     display: flex;
     top: -1.5em;
+  }
+
+  /* THIRD PAGE STYLE */
+  .ticket-frame-container {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .ticket-details {
+    width: 260px;
+    height:446px;
+  }
+
+  .event-title-date h5 {
+    margin-bottom: .5em;
+  }
+
+  .event-title-date, .user-img {
+    margin-bottom: 1.5em;
   }
   
 }
