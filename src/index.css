@@ -91,6 +91,11 @@ main {
   border-radius: 24px;
 }
 
+.ticket_step-container {
+display: flex;
+justify-content: space-between;
+}
+
 .main-title {
   font-family: "JejuMyeongjo";
   font-size: 1.5em;
@@ -202,7 +207,7 @@ margin-bottom: 2em;
   color: #000000;
 }
 
-.next-btn, .cancel-btn {
+.next-btn, .cancel-btn, .get-ticket-btn {
   display: block;
   width: 287px;
   height: 48px;
@@ -211,7 +216,7 @@ margin-bottom: 2em;
   border-radius: 0.75em;
 }
 
-.next-btn {
+.next-btn, .get-ticket-btn {
   color: #ffffff;
   background-color: #24A0B5;
   border: none;
@@ -227,15 +232,32 @@ margin-bottom: 2em;
 
 /* ************************************************* */
 /* SECOND PAGE */
-.first-section {
+.second-page-first-section {
+  width: 287px;
   height: 328px;
   padding: 24px;
-  /* margin-bottom: 2em; */
+  text-align: center;
+  background: radial-gradient(103.64% 57.39% at 14.02% 32.06%, rgba(36, 160, 181, 0.2) 0%, rgba(36, 160, 181, 0) 100%);
+  border-width: 0px 2px 2px 2px;
+  border-style: solid;
+  border-color: #07373F;
+  /* border: 0px 2px 2px 2px solid #07373f; */
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 24px;
+}
+
+.second-page-first-section {
+  margin-bottom: 2em;
+}
+
+.second-page-first-section p {
+  margin-bottom: 1em;
+  text-align: left;
 }
 
 
-/* ********************************************** */
-
+/* ***************************** */
 form {
   font-family: "Roboto", serif;
 }
@@ -243,6 +265,7 @@ form {
 .avatar-container {
   height: 240px;
   display: flex;
+  line-height: 1.5;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -269,6 +292,10 @@ z-index: 1;
   object-fit: cover;
   opacity: .6;
   border-radius: 32px;
+}
+
+.upload-icon {
+  margin-bottom: 1em;
 }
 
 form input {
@@ -324,6 +351,7 @@ form input {
   display: inline;
 }
 
+/* ************************************************* */
 /* DESKTOP VIEW */
 @media (min-width: 1000px) {
   header {
@@ -364,6 +392,8 @@ form input {
     border-radius: 32px;
   }
 
+  
+
   .container {
     width: 604px;
     margin: 0 auto;
@@ -392,9 +422,12 @@ form input {
   }
 
   .ticket-type {
-    margin-bottom: 0.75em;
     padding-right: .7em;
   }
+
+  .ticket-type:first-child, .ticket-type:nth-child(2) {
+    margin-bottom: 0;
+}
 
   #ticket-num {
     width: 100%;
@@ -405,7 +438,32 @@ form input {
     justify-content:space-between;
   }
 
-  .next-btn, .cancel-btn {
-    width: 266px
+  .next-desktop, .get-ticket-btn, .cancel-btn {
+    width: 270px
   }
+
+
+  /* SECOND PAGE STYLE */
+
+  .second-page-first-section {
+    width: 556px;
+    height: 328px;
+    padding: 16px 24px;
+  }
+
+  .image-frame {
+    height: 200px;
+    margin-top: 1.8em;
+    display: flex;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+  }
+
+  .avatar-container {
+    width: 240px;
+    height: 240px;
+    display: flex;
+    top: -1.5em;
+  }
+  
 }

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
+import ProgressBar from "./progressBar";
 
 const Form = () => {
     const navigate = useNavigate();
@@ -64,32 +65,36 @@ const Form = () => {
     }
     return (
         <>
-            <form onSubmit={handleSubmit} >
 
-            <h2 className="main-title">Attendee Details</h2>
-            <h3>Step 1/3</h3>
-            <section className="first-section">
-                <p>Upload Profile Photo</p>
-
-                <div className="avatar-container">
-                    <div className="avatar-el">
-
-                    <div>
-                    <img src="/cloud-download.png" alt="upload" />
-                    </div>
-
-                    <label htmlFor="avatar-input">Drag & drop or click to <span style={{display: "block"}}>upload</span></label>
-
-                    <input type="file" id="avatar-input" accept="image/*" onChange={handleImageChange} required/>
-                    </div>
-                    {
-                        loading ? "Uploading..." : <img src={selectedImage} className="uploaded-image" />
-                    }
-                    
-                    
+<div className="ticket_step-container">
+                <h2 className="main-title">Ticket Selection</h2>
+                <h3>Step 1/3</h3>
                 </div>
+            <ProgressBar step={2} totalSteps={3}/>
+            <form className="container" onSubmit={handleSubmit} >
+            <section className="second-page-first-section">
+                <p>Upload Profile Photo</p>
+                <div className="image-frame">
+
+                    <div className="avatar-container">
+                        <div className="avatar-el">
+
+                        <div className="upload-icon">
+                        <img src="/cloud-download.png" alt="upload-icon" />
+                        </div>
+
+                        <label htmlFor="avatar-input">Drag & drop or click to <span style={{display: "block"}}>upload</span></label>
+
+                        <input type="file" id="avatar-input" accept="image/*" onChange={handleImageChange} required/>
+                        </div>
+                        {
+                            loading ? "Uploading image..." : <img src={selectedImage} className="uploaded-image" />
+                        }
+                        
+                        
+                    </div>
                 
- 
+                </div>
 
             </section>
 
@@ -97,7 +102,7 @@ const Form = () => {
 
                 <div className="input-container">
                 <label  htmlFor="name">Enter your name</label>
-                <input type="text" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} id="name" name="name" required/>
+                <input type="text" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} id="name" name="name" minlength="3" required/>
                 {errors.name && <p style={{color: "red"}}>{errors.name}</p>}
                 </div>
 
@@ -117,7 +122,12 @@ const Form = () => {
                 <textarea name="about" id="about" placeholder="Textarea" cols="50" rows="4"></textarea>
                 </div>
 
-                <button type="submit" className="next-btn">Get My Free Ticket</button>
+                <div className="option-btns">
+                
+                <button type="submit" className="get-ticket-btn">Get My Free Ticket</button>
+
+                <button onClick={() => {navigate("/")}} className="cancel-btn">Back</button>
+                </div>
             </form>
         </>
     )

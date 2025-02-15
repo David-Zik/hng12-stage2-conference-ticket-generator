@@ -18,10 +18,6 @@ const SecondPage = () => {
             
             
             <Form />
-            <div className="option-btns">
-            
-            <button onClick={() => {navigate("/")}} className="cancel-btn">Back</button>
-            </div>
 
             </main>
 

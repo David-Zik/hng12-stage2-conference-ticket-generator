@@ -1,5 +1,6 @@
 import Header from "./components/header";
 import Input from "./components/input";
+import ProgressBar from "./components/progressBar"
 import {useNavigate} from "react-router-dom";
 
 const FirstPage = () => {
@@ -8,8 +9,11 @@ const FirstPage = () => {
         <div>
             <Header />
             <main>
+                <div className="ticket_step-container">
                 <h2 className="main-title">Ticket Selection</h2>
                 <h3>Step 1/3</h3>
+                </div>
+                <ProgressBar step={1} totalSteps={3} />
                 <div className="container">
                     <section className="first-section">
                     <div className="first">
@@ -52,7 +56,7 @@ const FirstPage = () => {
                 </div>
 
                     <div className="option-btns">
-                    <button onClick={() => navigate("/second")} className="next-btn">Next</button>
+                    <button onClick={() => navigate("/second")} className="next-btn next-desktop">Next</button>
                     <button className="cancel-btn">Cancel</button>
                     </div>
                 </div>  
