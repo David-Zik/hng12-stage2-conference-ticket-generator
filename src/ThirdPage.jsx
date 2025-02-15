@@ -9,21 +9,24 @@ const ThirdPage = () => {
         <div>
             <Header />
             <main>
-            <div className="ticket_step-container">
-                <h2 className="main-title">Ticket Selection</h2>
-                <h3>Step 1/3</h3>
+                <div className="ticket_step-container">
+                    <h2 className="main-title">Ticket Selection</h2>
+                    <h3>Step 1/3</h3>
                 </div>
                 <ProgressBar step={3} totalSteps={3} />
-            <section className="first-section">
+
                 <h1>Your Ticket is Booked!</h1>
-                <p>You can download or check your email for a copy</p>   
-            </section>
+                <p>You can download or check your email for a copy</p>  
 
-            <section className="second-section">
-                <img src="/ticket-frame.png" alt="Ticket-Frame" />
-                
-            </section>
+                <div className="ticket-frame-container">
 
+                <img className="ticket-frame" src="/ticket-frame.png" alt="Ticket-Frame" />
+                </div>
+
+                <div className="option-btns">
+                    <button onClick={() => navigate("/second")} className="next-btn next-desktop">Next</button>
+                    <button className="cancel-btn">Cancel</button>
+                </div>                
             </main>
         </div>
     )

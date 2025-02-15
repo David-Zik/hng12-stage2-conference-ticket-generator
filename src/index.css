@@ -258,6 +258,7 @@ margin-bottom: 2em;
 
 
 /* ***************************** */
+/* form.jsx styles */
 form {
   font-family: "Roboto", serif;
 }
@@ -305,7 +306,6 @@ form input {
   background-color: rgba(255,255,255,0);
   
 }
-/* form.jsx styles */
 .input-container {
   display: flex;
   flex-direction: column;
@@ -349,6 +349,13 @@ form input {
   top: 50%;
   transform: translateY(-50%);
   display: inline;
+}
+
+/* ************************************************* */
+/* THIRD PAGE */
+
+.ticket-frame {
+  width: 100%;
 }
 
 /* ************************************************* */
