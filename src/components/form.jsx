@@ -105,7 +105,7 @@ const Form = () => {
                 <label  htmlFor="email">Enter your email *</label>
 
                 <div className="email-container">
-                <img src="src/assets/envelope.png" alt="envelope" style={{width: "24px"}} />
+                <img src="/envelope.png" alt="envelope" style={{width: "24px"}} />
                 <input type="email" value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})} id="email" name="email" required/>
                 {errors.email && <p style={{color: "red"}}>{errors.email}</p>}
                 </div>
